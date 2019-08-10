@@ -1,0 +1,26 @@
+<div class="container">
+  <h4>Use this site to get your weather!</h4>
+  <div class="divider"></div>
+  <div class="row">
+    <div class="col s6 m6">
+      <div id="locationCard" class="card">
+        <div class="card-image">
+          <div id="street-view" style="height: 500px;"></div>
+        </div>
+        <div class="card-content">
+          <span id="locationAddress" class="card-title"></span>
+          <p id="locationForecast"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s6">
+      <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+    </div>
+  </div>
+</div>
+
+  <script src="js/home.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANAC1BGiHXXqJ1PhnqfGFf3uXBdZYLzQE&libraries=places&callback=initAutocomplete"
+         async defer></script>

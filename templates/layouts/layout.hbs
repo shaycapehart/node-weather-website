@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>
+    {{#if title}}
+      {{title}}
+    {{else}}
+      Base Page Title
+    {{/if}}
+  </title>
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  
+  <!-- START CUSTOM STYLE -->
+  <link rel="stylesheet" href="css/custom.css">
+  <!-- END CUSTOM STYLE -->
+</head>
+<body>
+  <!-- START HEADER -->
+  <header class="page-header">
+    {{> header}}
+  </header>
+  <!-- END HEADER -->
+    
+  <!-- START MAIN -->
+  <main>
+    {{{body}}}
+
+    <!-- BEGIN FLOATING ACTION BTN-->
+    {{> floating-action-btn }}
+    <!-- END FLOATING ACTION BTN-->
+  </main>
+  <!-- END MAIN -->
+
+  <!-- START FOOTER -->
+  <footer class="page-footer">
+    {{> footer }}
+  </footer>
+  <!-- END FOOTER -->
+
+  <!-- ================================================
+    Scripts
+    ================================================ -->
+  <!-- BEGIN VENDOR JS-->
+  <!-- END VENDOR JS-->
+  <!-- BEGIN PAGE VENDOR JS-->
+  <!-- END PAGE VENDOR JS-->
+  <!-- BEGIN THEME  JS-->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- END THEME  JS-->
+  <!-- BEGIN PAGE LEVEL JS-->
+  {{#if page}}
+  <script src="js/{{page}}.js"></script>      
+  {{/if}}
+  <script src="js/init.js"></script>
+  <!-- END PAGE LEVEL JS-->
+</body>
+</html>
