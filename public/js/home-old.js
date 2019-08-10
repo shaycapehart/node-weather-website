@@ -26,7 +26,7 @@ function initAutocomplete() {
     console.log(place);
     panorama.setPosition(place.geometry.location);
 
-    fetch("http://localhost:3000/weather?address=" + place).then(response => {
+    fetch("/weather?address=" + place).then(response => {
       response.json().then(data => {
         if (data.error) {
           locationAddress.textContent = data.error;
